@@ -43,7 +43,12 @@ slicerMacroBuildCLI(
 
 #-----------------------------------------------------------------------------
 if(BUILD_TESTING)
-#  add_subdirectory(Testing)
+  include(ExternalData)
+  # if Extension uses data store at a URL different from the Slicer4 URLs, then add the 
+  # data store to the list
+  list(APPEND ExternalData_URL_TEMPLATES "http://slicer.kitware.com/midas3/api/rest?method=midas.bitstream.download&checksum=%(hash)")
+
+  add_subdirectory(Testing)
 endif()
 
 #-----------------------------------------------------------------------------
