@@ -6,7 +6,6 @@
 set(TEMP ${SkullStripper_BINARY_DIR}/Testing/Temporary)
 set(INPUT ${SkullStripper_SOURCE_DIR}/Data/Input)
 set(BASELINE ${SkullStripper_SOURCE_DIR}/Data/Baseline)
-#set(ExternalData_OBJECT_STORE ${SlicerExtensions_BINARY_DIR}/ExternalData/Objects)
 
 set(CLP SkullStripper)
 
